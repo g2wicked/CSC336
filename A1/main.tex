@@ -137,7 +137,7 @@ return 0;
 }
 \end{lstlisting}
 \vspace{5mm}
-The calculation for $m = 10.0^{k}$ has small error margins, which don't affect the value much for small values of k. Storing larger values as a floating point becomes inaccurate. The proportion of relative error remains small, but as s values increase, the absolute error increases and compound upon each other (especially as cosine is a repeating function), directly affecting the final output of cosine.
+The calculation for $m = 10.0^{k}$ has small error margins, which don't affect the value much for small values of k. These small changes result in small errors in the result. Storing larger values as a floating point becomes inaccurate. The proportion of relative error remains small, but as k values increase, the absolute error increases and compound upon each other (especially as cosine is a repeating function), directly affecting the final output of cosine.
 \newpage
 \begin{table}[]
 \centering
@@ -197,7 +197,7 @@ The condition number can be calculated by the following formula:
  & = \frac{x}{\sin(x)}
 \end{split}
 \end{equation}
-We see in (1) that the condition number is $\frac{x}{\sin(x)}$. For the interval given above, the values of the condition number reach ~1.6 at the bounds. Since the condition number is bounded and not arbitrarily high, the function is not too ill-conditioned and can be written in a way that can be accurately evaluated. We can avoid catastrophic cancellation by converting the original equation to another, more stable equation that does not include the error caused by substraction (see part (b)).
+We see in (1) that the condition number is $\frac{x}{\sin(x)}$. For the interval given above, the values of the condition number are relatively small, reaching ~1.6 at the bounds. Since the condition number is bounded and not arbitrarily high, the function is not too ill-conditioned and can be written in a way that can be accurately evaluated. We can avoid catastrophic cancellation by converting the original equation to another, more stable equation that does not include the error caused by substraction (see part (b)).
 \end{flushleft}
 \vspace{5mm}
 
